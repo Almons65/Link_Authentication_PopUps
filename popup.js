@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function analyzeLink(url) {
     document.getElementById('per-text').textContent = "Analyzing...";
-    document.getElementById('rseult-area').style.display = "block";
+    document.getElementById('result-area').style.display = "block";
 
     console.log("Sending URL to Algorithm:", url);
 
