@@ -40,7 +40,7 @@ function displayResult(num) {
     
     PerBox.textContent = num + "%";
     
-    PerBox.classList.remove('safe', 'moderate', 'danger');
+    PerBox.classList.remove('safe', 'moderate', 'highrisk', 'danger');
 
     if (num <= 30) {
         PerBox.classList.add('safe');
@@ -48,6 +48,11 @@ function displayResult(num) {
     } else if (num <= 70) {
         PerBox.classList.add('moderate');
         msg.textContent = "Warning: Proceed with caution.";
+        
+    } else if (num <= 90){
+        PerBox.classList.add('high risk');
+        msg.textContent = "Warning: Input restricted.";
+
     } else {
         PerBox.classList.add('danger');
         msg.textContent = "DANGER!";
